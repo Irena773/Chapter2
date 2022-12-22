@@ -1,5 +1,6 @@
 #pragma once
 #include "SDL.h"
+#include <string>
 
 class Game {
 public:
@@ -8,6 +9,8 @@ public:
 	bool Initialize();
 	void RunLoop();
 	void Shutdown();
+
+	SDL_Texture* GetTexture(const std::string& fileName);
 
 private:
 	void ProcessInput();

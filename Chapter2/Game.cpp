@@ -1,4 +1,6 @@
 #include "Game.h"
+#include "SDL_image.h"
+#include <string>
 
 bool Game::Initialize() {
 
@@ -16,6 +18,10 @@ bool Game::Initialize() {
 	if (!mRenderer)
 	{
 		SDL_Log("レンダラーの作成に失敗しました: %s", SDL_GetError());
+		return false;
+	}
+	if (IMG_Init(IMG_INIT_PNG) == 0) {
+		SDL_Log("SDL_imageの初期化に失敗しました:%s", SDL_GetError());
 		return false;
 	}
 
@@ -67,6 +73,25 @@ void Game::GenerateOutput() {
 	SDL_RenderPresent(mRenderer);
 }
 
+
+//画像の読み込み処理
+SDL_Texture* Game::GetTexture(const std::string& fileName) {
+	//ファイルからロード
+	SDL_Surface* surf = IMG_Load(fileName.c_str());
+	if (!surf) {
+		SDL_Log("テクスチャファイルのロードに失敗しました:%s", fileName.c_str());
+		return nullptr;
+	}
+
+	//サーフェスからテクスチャを作成
+	SDL_Texture* tex = SDL_CreateTextureFromSurface(mRenderer, surf);
+	SDL_FreeSurface(surf);
+	if (!tex) {
+		SDL_Log("テクスチャへの変換に失敗しました:%s", fileName.c_str());
+		return nullptr;
+	}
+	return tex;
+}
 void Game::Shutdown() {
 	SDL_DestroyRenderer(mRenderer);
 	SDL_DestroyWindow(mWindow);
