@@ -1,4 +1,7 @@
-﻿  Chapter2.vcxproj -> D:\C++Game\Chapter2\x64\Debug\Chapter2.exe
+﻿  Game.cpp
+  Main.cpp
+  コードを生成中...
+  Chapter2.vcxproj -> D:\C++Game\Chapter2\x64\Debug\Chapter2.exe
   ファイルが見つかりません - *.dll
   0 個のファイルをコピーしました
 C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(159,5): error MSB3073: コマンド "xcopy "C:\SDL2-2.26.1\lib\x64\*.dll" "D:\C++Game\Chapter2\x64\Debug\" /i/s/y
