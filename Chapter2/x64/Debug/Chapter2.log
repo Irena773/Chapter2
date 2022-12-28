@@ -1,8 +1,8 @@
 ﻿  Game.cpp
-  Main.cpp
-  コードを生成中...
   Chapter2.vcxproj -> D:\C++Game\Chapter2\x64\Debug\Chapter2.exe
-  ファイルが見つかりません - *.dll
-  0 個のファイルをコピーしました
-C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(159,5): error MSB3073: コマンド "xcopy "C:\SDL2-2.26.1\lib\x64\*.dll" "D:\C++Game\Chapter2\x64\Debug\" /i/s/y
-C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(159,5): error MSB3073: :VCEnd" はコード 4 で終了しました。
+  D:\SDL2-2.26.1\lib\x64\SDL2.dll
+  1 個のファイルをコピーしました
+  D:\C++Game\External\SDL2_image-2.6.2\lib\x64\SDL2_image.dll
+  D:\C++Game\External\SDL2_image-2.6.2\lib\x64\optional\libtiff-5.dll
+  D:\C++Game\External\SDL2_image-2.6.2\lib\x64\optional\libwebp-7.dll
+  3 個のファイルをコピーしました
